@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+
+    for (var j=0; j < myFarm.length; j++) {
+      console.log(myFarm[j]);
+      // the for loop has three statements.
+      // for (statement 1; statement 2; statement 3)
+      // statement 1 executes before the loop starts
+      // statement 2 defines the condition for running the loop
+      // in this loop, statement 2 (j < myFarm.length) is saying run this again until statement 2 is false (j is not less than myFarm.length)
+      // statement 3 executes after the first loop
+      // myFarm.length gets the count of items in the array (5).
+      // If we want to list the items in the array, we first declare a variable (j in this case) set to 0, the first position in an array.
+      // console.log(myFarm[j]) will be printed in the console as "the item in the 0th position of the myFarm array" (in this case, chickens).
+      // in this initial loop, j is equal to 0. after the first run, statement 2 is evaluated, determined to still be true, so the loop will run again.
+      // if statement 2 is verified, statement 3 will be applied. so j++ means j+1 (0+1).
+      // now in console.log(myFarm[j]), j=1 (pigs).
+      //  this repeats until j is not less than myFarm.length (4 is not less than 4). when j=4, all the items in the array will have been listed. at this point, the loop ends.
+      if (myFarm[j].charAt(0) ==="c" || myFarm[j].charAt(0) === "o") {
+        alert("Starts with a c or an o!");
+      }
+    }
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<script type="tex/javascript">
+
+var animals = ["zebra", "cat", "dog" "turtle"];
+for (i=0; i<animals.length; i++) {
+  console.log(animals[i]);
+}
+
+
+
+</script>
+
+</body>
+ </html>

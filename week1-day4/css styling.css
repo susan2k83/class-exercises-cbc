@@ -1,0 +1,13 @@
+h1 { 
+	font-family: Ubuntu;
+	color: purple;
+
+}
+p {
+	font-family: Raleway;
+	color: green;
+}
+h3, h4 {
+	font-family: "Josefin Sans";
+	color: blue;
+}

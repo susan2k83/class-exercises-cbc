@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Magical Cat Button</title>
+</head>
+
+<body>
+  <button id="cat-button">magical cat button</button>
+  <div id="images">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    //
+    $("#cat-button").on("click", function() {
+
+      // var used to recieve the API key
+      var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cats";
+
+      // the jquery for Giphy, setting the GET method
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+
+      // done getting the request from server / 'response' is not native, it's just a name, that is used in the line below``````````````````````````````````
+      .done(function(response) {
+
+        // var to hold image from server
+        var imageUrl = response.data.image_original_url;
+
+        // defines 1query img object
+        var catImage = $("<img>");
+
+        // adds attributes to img cbject
+        catImage.attr("src", imageUrl);
+        catImage.attr("alt", "cat image");
+
+        //prepends img object to DOM element with id of images
+        $("#images").prepend(catImage);
+      });
+    });
+  </script>
+</body>
+
+</html>
